@@ -10,14 +10,17 @@ submitRatingButtonEl.addEventListener("click", () => {
   if (isSelected) {
     ratingCardEl.classList.add("hidden");
     thanksCardEl.classList.remove("hidden");
+    thanksCardEl.classList.add("grid");
   } else return;
 });
 
 ratingListEl.addEventListener("click", (e) => {
-  const currentRating = e.target.closest("span");
-  if (!currentRating) return;
-  isSelected = true;
-  currentRating.style.backgroundColor = "#FC7614";
-  currentRating.style.color = "#fff";
-  ratingSelectedEl.textContent = `You selected ${currentRating.textContent} out of ${ratingNumbersArray.length}!`;
+  const selectedRating = e.target.closest("span");
+  if (!selectedRating) return;
+  else {
+    isSelected = true;
+    selectedRating.style.color = "#fff";
+    selectedRating.style.backgroundColor = "#FC7614";
+    ratingSelectedEl.textContent = `You selected ${selectedRating.textContent} out of ${ratingNumbersArray.length}`;
+  }
 });
