@@ -93,7 +93,7 @@ textarea:not([rows]) {
   color: #262e38;
 }
 
-.rating-item[aria-selected='true'] {
+.rating-item[data-selected='true'] {
   color: #fff;
   background-color: #fc7614;
 }
