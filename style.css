@@ -88,14 +88,29 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
+.rating-item:is(:hover, :focus) {
+  background-color: #fff;
+  color: #262e38;
+}
+
+.rating-item[aria-selected='true'] {
+  color: #fff;
+  background-color: #fc7614;
+}
+
 .rating-card {
   position: relative;
+  scale: 1;
+  transform-origin: center;
+  transition: scale 250ms ease-in-out;
 }
 
 .thanks-card {
   position: absolute;
   inset: 0;
   scale: 0;
+  margin: auto;
+  height: fit-content;
   transform-origin: center;
   transition: scale 250ms ease-in;
 }
