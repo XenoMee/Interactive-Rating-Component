@@ -22,7 +22,10 @@ const displayAppreciationCard = () => {
 submitRatingBtn.addEventListener('click', () => {
   const ratingBtns = ratingListEl.querySelectorAll('.rating-item');
   ratingBtns.forEach((rating) => {
-    if (rating.dataset.selected === 'true') displayRatingCard();
+    if (rating.dataset.selected === 'true') {
+      displayRatingCard();
+      rating.setAttribute('data-selected', 'false');
+    }
   });
 });
 rateAgainBtn.addEventListener('click', displayAppreciationCard);
