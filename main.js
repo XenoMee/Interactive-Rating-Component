@@ -24,7 +24,9 @@ submitRatingBtn.addEventListener('click', () => {
   ratingBtns.forEach((rating) => {
     if (rating.dataset.selected === 'true') {
       displayRatingCard();
-      rating.setAttribute('data-selected', 'false');
+      setTimeout(() => {
+        rating.setAttribute('data-selected', 'false');
+      }, 250);
     }
   });
 });
