@@ -19,9 +19,12 @@ const displayAppreciationCard = () => {
   }, 250);
 };
 
-const removeSelectedState = () => {};
-
-submitRatingBtn.addEventListener('click', displayRatingCard);
+submitRatingBtn.addEventListener('click', () => {
+  const ratingBtns = ratingListEl.querySelectorAll('.rating-item');
+  ratingBtns.forEach((rating) => {
+    if (rating.dataset.selected === 'true') displayRatingCard();
+  });
+});
 rateAgainBtn.addEventListener('click', displayAppreciationCard);
 
 ratingListEl.addEventListener('click', (e) => {
