@@ -87,3 +87,15 @@ textarea:not([rows]) {
 :target {
   scroll-margin-block: 5ex;
 }
+
+.rating-card {
+  position: relative;
+}
+
+.thanks-card {
+  position: absolute;
+  inset: 0;
+  scale: 0;
+  transform-origin: center;
+  transition: scale 250ms ease-in;
+}
